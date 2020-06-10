@@ -1,0 +1,61 @@
+{
+  "name": "luna-gutenberg-boilerplate",
+  "title": "Gutenberg Boilterplate",
+  "description": "Gutenberg Boilterplate",
+  "author": "Andrew Iontton",
+  "homepage": "https://www.iontton.dev",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "./bin/build-css",
+    "build:js": "parcel build js/main.js --no-cache --out-file dist/build.js",
+    "build:gutenberg": "parcel build blocks/blocks.js --no-cache --out-file dist/blocks.js",
+    "build": "run-s \"build:*\"",
+    "watch:css": "chokidar \"**/*.scss\" -c \"npm run build:css\" --initial",
+    "watch:js": "parcel watch js/main.js --no-cache --out-file dist/build.js",
+    "watch:gutenberg": "parcel watch blocks/blocks.js --no-cache --out-file dist/blocks.js",
+    "watch": "run-p \"watch:*\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.4",
+    "browserlist": "^1.0.1",
+    "caniuse-lite": "^1.0.30000983",
+    "chokidar-cli": "^1.2.1",
+    "commander": "^2.9.0",
+    "cssnano": "^4.1.10",
+    "del-cli": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.0",
+    "eslint-plugin-react": "^6.2.0",
+    "exec": "^0.2.1",
+    "node-notifier": "^5.2.1",
+    "node-sass": "^4.9.3",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "postcss-cli": "^6.0.1",
+    "postcss-focus": "^4.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "postcss-pxtorem": "^5.1.1"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^3.7.5",
+    "@wordpress/blocks": "^6.12.1",
+    "@wordpress/i18n": "^3.9.0",
+    "components": "^0.1.0",
+    "variables": "^1.0.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 5%",
+    "ie 11"
+  ],
+  "main": "js/main.js",
+  "license": "ISC"
+}

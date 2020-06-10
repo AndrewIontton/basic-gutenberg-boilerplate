@@ -1,0 +1,2 @@
+node-sass --source-map true style.scss style.css --output-style expanded && postcss -r style.css
+node-sass --source-map true style-editor.scss style-editor.css --output-style expanded && postcss -r style-editor.css
